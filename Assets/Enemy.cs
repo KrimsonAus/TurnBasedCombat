@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthObj.transform.localScale = new Vector3(health/2f, 0.075f, 0.175f);
+        healthObj.transform.localScale = new Vector3((12 / maxHealth) * health, 12, 12);
 
         if(attackingEnemy && !FindAnyObjectByType<Manager>().playerTurn)
         {
